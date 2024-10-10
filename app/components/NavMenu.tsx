@@ -50,7 +50,7 @@ export default function NavMenu() {
         ref={menuRef}
         className="absolute top-20 left-0 right-0 mx-auto flex justify-center items-center bg-yellow bg-opacity-10 backdrop-blur-sm cursor-pointer h-[60px] scale-0 rounded-full w-[60px]"
       >
-        <FaBars className="text-black" />
+        <FaBars className="text-black" size={25} />
       </div>
     </div>
   );

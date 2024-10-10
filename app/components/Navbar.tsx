@@ -1,4 +1,3 @@
-import gsap from "gsap";
 import Image from "next/image";
 import logo from "../../public/port-logo.svg";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -7,7 +6,7 @@ import MenuButton from "./MenuButton";
 
 export default function Navbar() {
   return (
-    <header className="fixed w-full py-[54.11px] px-[30px] lg:px-[100px]">
+    <header className="fixed w-full py-[54.11px] px-[30px] lg:px-[100px] z-50">
       <nav className="flex justify-between items-center h-[81.03px]">
         <div className="w-1/3">
           <Image src={logo} alt="Logo" className="cursor-pointer" />

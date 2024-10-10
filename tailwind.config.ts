@@ -12,10 +12,6 @@ const config: Config = {
         green: "#00C06F",
         yellow: "#CFFF69",
       },
-      fontSizes: {
-        xl: "2.986rem",
-        md: "2.5rem",
-      },
     },
   },
   plugins: [],

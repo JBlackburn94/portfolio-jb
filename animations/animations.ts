@@ -1,6 +1,7 @@
 // animations/navAnimations.ts
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -82,5 +83,52 @@ export const animateMenuBg = (
       toggleActions: "play none none reverse",
     },
     backgroundColor: "#cccccc",
+  });
+};
+
+export const animateHeader = (
+  header: React.RefObject<HTMLHeadingElement>,
+  headerTwo: React.RefObject<HTMLHeadingElement>,
+  heroIcon: React.RefObject<HTMLImageElement>,
+  heroSection: React.RefObject<HTMLDivElement>
+) => {
+  gsap.to(header.current, {
+    opacity: 1,
+    duration: 0.4,
+  });
+
+  gsap.to(headerTwo.current, {
+    top: 15,
+    right: 10,
+    opacity: 0.5,
+    delay: 0.5,
+  });
+
+  gsap.to(heroIcon.current, {
+    opacity: 1,
+    duration: 0.7,
+    delay: 0.2,
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    const { clientX, clientY } = e;
+    gsap.to(headerTwo.current, {
+      x: clientX / 100,
+      y: clientY / 100,
+      duration: 0.1,
+      ease: "power2.out",
+    });
+    gsap.to(header.current, {
+      x: clientX / 110,
+      y: clientY / 110,
+      duration: 0.1,
+      ease: "power2.out",
+    });
+    gsap.to(heroIcon.current, {
+      x: clientX / 120,
+      y: clientY / 120,
+      duration: 0.1,
+      ease: "power2.out",
+    });
   });
 };
