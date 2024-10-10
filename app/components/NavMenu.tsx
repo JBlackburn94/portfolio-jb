@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { navLinks } from "../constants/constants";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect } from "react";
 import { useRef } from "react";
 import {
@@ -18,7 +17,6 @@ export default function NavMenu() {
   const navRef = useRef(null);
   const menuRef = useRef(null);
   const linkRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const tl = gsap.timeline();
 
   useEffect(() => {
     animateLinksOpacity(linkRefs, navRef);

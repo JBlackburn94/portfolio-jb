@@ -16,33 +16,23 @@ export default function Hero() {
   });
 
   return (
-    <section className="h-screen bg-green hero pt-[80px] md:pt-[150px] px-[35px] md:px-[100px] pb-[50px]">
-      <div className="h-full w-full flex flex-col justify-center items-center">
-        <div className="flex justify-center items-center relative gap-1 leading-[110px]">
+    <section className="h-screen bg-green bg-one pt-[80px] md:pt-[150px] px-[35px] md:px-[100px] pb-[50px]">
+      <div className="h-full w-full flex flex-col justify-center items-center gap-10">
+        <div className="flex justify-center items-center text-center relative gap-1 leading-[80px] md:leading-[110px]">
           <h1
             ref={header}
-            className="text-[6rem] md:text-[7rem] opacity-0 font-bold z-10"
+            className="text-[5rem] md:text-[7rem] opacity-0 font-bold z-10"
           >
-            Hello
+            Hello, <br /> I&apos;m Jason <br /> Blackburn
           </h1>
           <p
             ref={headerTwo}
-            className="text-[6rem] md:text-[7rem] opacity-0 font-bold text-yellow absolute top-0 left-0 z-0"
+            className="text-[5rem] md:text-[7rem] opacity-0 font-bold text-white absolute top-0 left-0 z-0"
           >
-            Hello
+            Hello, <br /> I&apos;m Jason <br /> Blackburn
           </p>
-          <Image
-            ref={heroIcon}
-            src={exclam}
-            alt="An illustration of a comma"
-            className="opacity-0"
-          />
         </div>
-        <div className="flex justify-center items-center w-full">
-          <h2 className="text-[6rem] md:text-[7rem] font-bold text-center leading-[110px]">
-            I&apos;m Jason <br /> Blackburn
-          </h2>
-        </div>
+        <h2 className="text-[2rem] font-bold">Frontend Developer</h2>
       </div>
     </section>
   );

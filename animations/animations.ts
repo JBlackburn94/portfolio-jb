@@ -82,7 +82,9 @@ export const animateMenuBg = (
       scrub: true,
       toggleActions: "play none none reverse",
     },
-    backgroundColor: "#cccccc",
+    backgroundColor: "#ffffff",
+    backgroundOpacity: 0,
+    backgroundBlur: 10,
   });
 };
 
@@ -98,9 +100,8 @@ export const animateHeader = (
   });
 
   gsap.to(headerTwo.current, {
-    top: 15,
-    right: 10,
-    opacity: 0.5,
+    top: 8,
+    opacity: 1,
     delay: 0.5,
   });
 

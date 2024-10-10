@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.hero {
+.bg-one {
   background-image: url("../public/port-bg-1.svg");
 }
 
-.skills {
+.bg-two {
   background-image: url("../public/port-bg-2.svg");
 }
