@@ -29,7 +29,7 @@ export const animateNavWidth = (navRef: React.RefObject<HTMLDivElement>) => {
     scrollTrigger: {
       trigger: navRef.current,
       start: "200% top",
-      end: "600% top",
+      end: "500% top",
       scrub: true,
       toggleActions: "play none none reverse",
     },
@@ -43,8 +43,8 @@ export const animateNavScale = (navRef: React.RefObject<HTMLDivElement>) => {
   gsap.to(navRef.current, {
     scrollTrigger: {
       trigger: navRef.current,
-      start: "600% top",
-      end: "1000% top",
+      start: "500% top",
+      end: "700% top",
       scrub: true,
       toggleActions: "play none none reverse",
     },
@@ -59,12 +59,28 @@ export const animateMenu = (
   gsap.to(menuRef.current, {
     scrollTrigger: {
       trigger: navRef.current,
-      start: "1000% top",
-      end: "1400% top",
+      start: "700% top",
+      end: "1000% top",
       scrub: true,
       toggleActions: "play none none reverse",
     },
     scale: 1,
     top: 0,
+  });
+};
+
+export const animateMenuBg = (
+  menuRef: React.RefObject<HTMLDivElement>,
+  navRef: React.RefObject<HTMLDivElement>
+) => {
+  gsap.to(menuRef.current, {
+    scrollTrigger: {
+      trigger: navRef.current,
+      start: "900% top",
+      end: "1000% top",
+      scrub: true,
+      toggleActions: "play none none reverse",
+    },
+    backgroundColor: "#cccccc",
   });
 };

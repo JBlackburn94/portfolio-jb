@@ -8,9 +8,11 @@ import { useRef } from "react";
 import {
   animateLinksOpacity,
   animateMenu,
+  animateMenuBg,
   animateNavScale,
   animateNavWidth,
 } from "@/animations/animations";
+import { FaBars } from "react-icons/fa";
 
 export default function NavMenu() {
   const navRef = useRef(null);
@@ -23,13 +25,14 @@ export default function NavMenu() {
     animateNavWidth(navRef);
     animateNavScale(navRef);
     animateMenu(menuRef, navRef);
+    animateMenuBg(menuRef, navRef);
   }, []);
 
   return (
     <div className="relative">
       <div
         ref={navRef}
-        className="hidden lg:flex justify-center items-center relative h-[60px] rounded-full bg-yellow bg-opacity-60 backdrop-blur-md"
+        className="hidden lg:flex justify-center items-center relative h-[60px] rounded-full bg-yellow bg-opacity-10 backdrop-blur-sm"
       >
         {navLinks.map((link, index) => (
           <div
@@ -45,9 +48,9 @@ export default function NavMenu() {
       </div>
       <div
         ref={menuRef}
-        className="absolute top-20 left-0 right-0 mx-auto flex justify-center items-center bg-yellow opacity-60 hover:opacity-100 cursor-pointer h-[60px] scale-0 rounded-full w-[60px]"
+        className="absolute top-20 left-0 right-0 mx-auto flex justify-center items-center bg-yellow bg-opacity-10 backdrop-blur-sm cursor-pointer h-[60px] scale-0 rounded-full w-[60px]"
       >
-        <p>Menu</p>
+        <FaBars className="text-black" />
       </div>
     </div>
   );
